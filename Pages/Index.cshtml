@@ -3,8 +3,22 @@
 @{
     ViewData["Title"] = "TickTaccToe";
 }
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById('myCanvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            // Example: Draw a red rectangle
+            ctx.fillStyle = 'red';
+            ctx.fillRect(10, 10, 100, 100);
+        } else {
+            alert('Canvas not supported in this browser.');
+        }
+    };
+</script>
 
 <div class="text-center">
-    <h1 class="display-4">Play a game of TickTaccToe</h1>
-    <button class="btn btn-primary">Start Game</button>
+    <h1 class="display-4" style="position: relative; z-index: 1;">Play a game of TickTaccToe</h1>
+    <button class="btn btn-primary" style="position: relative; z-index: 1;">Start Game</button>
+    <canvas id="myCanvas" width="800" height="600" style="position: absolute; top: 0; left: 0; z-index: 0;"></canvas>
 </div>

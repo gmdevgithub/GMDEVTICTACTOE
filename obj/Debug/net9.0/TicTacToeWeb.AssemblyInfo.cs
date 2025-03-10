@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8cd2c0cc-ee37-4d12-8927-3abce9a5dab4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicTacToeWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3b4383e201a5d7fa1436a214305365c8a415ff0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicTacToeWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicTacToeWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
