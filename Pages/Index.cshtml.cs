@@ -26,7 +26,7 @@ namespace TicTacToeWeb.Pages
             try
             {
                 var supabaseRequest = new HttpRequestMessage(HttpMethod.Get, "/rest/v1/users?select=*");
-                supabaseRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Environment.GetEnvironmentVariable("SUPABASE_API_KEY"));
+                supabaseRequest.Headers.Add("apikey", Environment.GetEnvironmentVariable("SUPABASE_CLIENT_API_KEY"));
 
                 var supabaseResponse = await _supabaseClient.SendAsync(supabaseRequest);
                 if (supabaseResponse.IsSuccessStatusCode)

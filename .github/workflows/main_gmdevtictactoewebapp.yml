@@ -65,4 +65,10 @@ jobs:
           app-name: 'GMDevTicTacToeWebApp'
           slot-name: 'Production'
           package: .
-          
+
+      - name: Set environment variables
+        run: |
+          echo "SUPABASE_API_URL=${{ secrets.SUPABASE_API_URL }}" >> $GITHUB_ENV
+          echo "SUPABASE_CLIENT_API_KEY=${{ secrets.SUPABASE_CLIENT_API_KEY }}" >> $GITHUB_ENV
+          echo "UPSTASH_REDIS_HOST=${{ secrets.UPSTASH_REDIS_HOST }}" >> $GITHUB_ENV
+          echo "UPSTASH_REDIS_TOKEN=${{ secrets.UPSTASH_REDIS_TOKEN }}" >> $GITHUB_ENV
